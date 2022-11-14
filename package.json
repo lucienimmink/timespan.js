@@ -1,6 +1,6 @@
 {
   "name": "@addasoft/timespan",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "format milliseconds as human readable strings",
   "main": "dist/timespan.umd.cjs",
   "module": "dist/timespan.js",
