@@ -2,11 +2,12 @@
   "name": "@addasoft/timespan",
   "version": "1.0.2",
   "description": "format milliseconds as human readable strings",
-  "main": "dist/timespan.umd.cjs",
+  "main": "index.ts",
   "module": "dist/timespan.js",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "index.ts"
   ],
   "scripts": {
     "build": "vite build .",
