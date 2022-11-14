@@ -5,6 +5,9 @@
   "main": "dist/timespan.umd.cjs",
   "module": "dist/timespan.js",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build .",
     "lint:eslint": "eslint --ext .ts . --ignore-path .gitignore",
