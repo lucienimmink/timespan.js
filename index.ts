@@ -1,15 +1,15 @@
-function leftPad0(n) {
+function leftPad0(n: number) {
   if (n === 0) {
     return '00';
   }
   return (n < 10 ? '0' : '') + n;
 }
-function getDays(days) {
+function getDays(days: number) {
   if (days) return `${days} day${days > 1 ? 's' : ''}, `;
   return '';
 }
 
-export default function timeSpan(mseconds, humanize = false) {
+export default function timeSpan(mseconds: number, humanize = false) {
   if (!mseconds) return '';
   const seconds = mseconds / 1000;
   const days = Math.floor(seconds / 3600 / 24);

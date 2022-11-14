@@ -5,6 +5,7 @@ module.exports = {
     node: true,
   },
   extends: 'airbnb-base',
+  parser: '@typescript-eslint/parser',
   overrides: [
   ],
   parserOptions: {
