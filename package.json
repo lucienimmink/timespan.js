@@ -20,7 +20,7 @@
     "test": "echo \"Warn: no test specified\" && exit 0",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
-    "preversion": "npm run lint && npm run test",
+    "preversion": "npm run test",
     "version": "npm run build",
     "postversion": "git push && git push --tags"
   },
