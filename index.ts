@@ -1,15 +1,24 @@
+import translations from './translations.ts';
+
 function leftPad0(n: number) {
   if (n === 0) {
     return '00';
   }
   return (n < 10 ? '0' : '') + n;
 }
-function getDays(days: number) {
-  if (days) return `${days} day${days > 1 ? 's' : ''}, `;
+function getDays(days: number, locale: string) {
+  if (days) {
+    if (days === 1) return `${days} ${translations[locale].day}`;
+    return `${days} ${translations[locale].days}`;
+  }
   return '';
 }
 
-export default function timeSpan(mseconds: number, humanize = false) {
+export default function timeSpan(
+  mseconds: number,
+  humanize = false,
+  locale = 'en-GB'
+) {
   if (!mseconds) return '';
   const seconds = mseconds / 1000;
   const days = Math.floor(seconds / 3600 / 24);
@@ -17,12 +26,12 @@ export default function timeSpan(mseconds: number, humanize = false) {
   const minutes = Math.floor((seconds % 3600) / 60);
   const value = [];
   if (humanize) {
-    value.push(getDays(days));
+    value.push(getDays(days, locale));
     if (hours) {
-      value.push(`${hours} hr`);
+      value.push(`${hours} ${translations[locale].hours || 'hrs'}`);
     }
     if (minutes) {
-      value.push(`${minutes} min`);
+      value.push(`${minutes} ${translations[locale].minutes || 'min'}`);
     }
     return value.join(' ');
   }
