@@ -8,7 +8,7 @@
   "files": [
     "dist",
     "index.ts",
-    "translations.ts"
+    "translations.js"
   ],
   "scripts": {
     "build": "vite build .",
