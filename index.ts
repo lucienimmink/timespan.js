@@ -1,4 +1,5 @@
-import translations from './translations.ts';
+// @ts-ignore
+import translations from './translations';
 
 function leftPad0(n: number) {
   if (n === 0) {
