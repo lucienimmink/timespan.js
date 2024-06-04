@@ -8,6 +8,8 @@
     "strict": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "importHelpers": true,
