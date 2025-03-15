@@ -12,8 +12,8 @@
   ],
   "scripts": {
     "build": "vite build .",
-    "lint:eslint": "eslint --ext .ts . --ignore-path .gitignore",
-    "format:eslint": "eslint --ext .ts . --fix --ignore-path .gitignore",
+    "lint:eslint": "eslint .",
+    "format:eslint": "eslint . --fix",
     "lint:prettier": "prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format:prettier": "prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "lint": "npm run lint:eslint && npm run lint:prettier",
@@ -50,10 +50,14 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^8.0.0",
-    "eslint": "^8.27.0",
+    "@eslint/compat": "^1.2.7",
+    "@eslint/eslintrc": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.0.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-html": "^8.1.2",
+    "eslint-plugin-import": "^2.31.0",
     "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.0.0"
